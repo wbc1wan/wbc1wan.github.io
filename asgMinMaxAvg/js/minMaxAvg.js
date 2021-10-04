@@ -14,11 +14,10 @@ console.clear()
                 
                     let avg = sum / arr.length;      
                     console.log("Average Number is : " + avg)
-                
-                    
-                document.write("For List Number of : " +"<b>" + arr +"</b>")
-                document.write("<br> Maximum Number is &nbsp: " +Math.max(...arr))
-                document.write("<br> Smallest Number is : " +Math.min(...arr))
-                document.write("<br> Average is : " +avg)
+
+                    document.write("For List Number of : " +"<b>" + arr +"</b>")
+                    document.write("<br> Maximum Number is &nbsp: " +Math.max(...arr))
+                    document.write("<br> Smallest Number is : " +Math.min(...arr))
+                    document.write("<br> Average is : " +avg)
                 }
                 minMaxAvg()
