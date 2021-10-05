@@ -29,13 +29,14 @@ function  minMaxAvg(textBox1, textBox2, textBox3){
         console.log("Maximum Number is &nbsp: "+Math.max(...input))
         console.log("Smallest Number is : "+Math.min(...input))
         console.log("For List Number : "+input)
-        
+        console.log(x)
 
         document.getElementById("display_message").innerHTML = "<br> Maximum Number is &nbsp: "+Math.max(...input);
         document.getElementById("display_message2").innerHTML = "<br> Smallest Number is : "+Math.min(...input);
         document.getElementById("display_message3").innerHTML = "<br> Total Number is &nbsp &nbsp: "+sum;
         document.getElementById("display_message4").innerHTML = "<br> Average Number is &nbsp: "+avg.toFixed(2);
-      }
+      
+    }
 }
 
 function validateNumber(e) {
@@ -47,12 +48,9 @@ function validateNumber(e) {
     return ret;  
 }
 
-function clearInput()  
+function reset()  
 {
-    document.getElementById('textIn1').value = "";
-    document.getElementById('textIn2').value = "";
-    document.getElementById('textIn3').value = "";
-    document.getElementById("x").innerHTML = "";
+  location.reload();  
 } 
 
         var specialKeys = new Array();  
