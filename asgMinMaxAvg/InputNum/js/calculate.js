@@ -19,7 +19,7 @@ function  minMaxAvg(textBox1, textBox2, textBox3){
 
       else{
 
-    for (let i = 0; i < input.length; i++) {        
+        for (let i = 0; i < input.length; i++) {        
             sum += input[i];     
         }
     
