@@ -13,6 +13,12 @@ function  minMaxAvg(textBox1, textBox2, textBox3){
         return false;
       }
 
+      else if(isNaN(x||y||z)){
+        alert("Insert Digits Only (0-9)");
+      }
+
+      else{
+
     for (let i = 0; i < input.length; i++) {        
             sum += input[i];     
         }
@@ -28,7 +34,7 @@ function  minMaxAvg(textBox1, textBox2, textBox3){
         document.getElementById("display_message").innerHTML = "<br> Maximum Number is &nbsp: "+Math.max(...input);
         document.getElementById("display_message2").innerHTML = "<br> Smallest Number is : "+Math.min(...input);
         document.getElementById("display_message3").innerHTML = "<br> Average Number is &nbsp: "+avg.toFixed(2);
-    
+      }
 }
 
 function validateNumber(e) {
@@ -48,6 +54,14 @@ function clearInput()
     document.getElementById("x").innerHTML = "";
 } 
 
-       
+        var specialKeys = new Array();  
+        specialKeys.push(8);  
+        function IsNumeric(e) 
+        {  
+            var keyCode = e.which ? e.which : e.keyCode  
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);  
+            document.getElementById("error").style.display = ret ? "none" : "inline";  
+            return ret;  
+        } 
 
 
