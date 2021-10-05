@@ -124,7 +124,7 @@
             <br>
             <br>
             <input type="button" id="btnSum" value="Calculate" class="button" onClick="minMaxAvg('textIn1','textIn2','textIn3')"/>
-            <input type="reset" value="Reset" class="button2" onclick="reset()" />
+            <input type="reset" value="Reset" class="button2" onclick="clearInput()" />
 
             <p id="x"> -- Result -- 
                 <span id = "display_message"> </span> 
@@ -133,8 +133,16 @@
                 <span id = "display_message4"></span>
             </p>
 
+            <div id="hello"></div>
+
         </div>
     </div>
+    <script type ="text/javascript">
+        what();
+        function what(){
+            document.getElementById('hello').innerHTML = 'hi';
+        };
+    </script>
     <script src="js/calculate.js"></script>
     
 </body>
