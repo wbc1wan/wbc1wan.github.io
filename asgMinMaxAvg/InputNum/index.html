@@ -87,7 +87,8 @@
     box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
     outline: 0;
     }
-        .button2:hover {
+    
+    .button2:hover {
     box-shadow: 0 5px 10px 0 rgba(252, 250, 250, 0.993);
     background-color: red;
     border: none;
@@ -125,9 +126,9 @@
             <br>
             <br>
             <input type="button" id="btnSum" value="Calculate" class="button" onClick="minMaxAvg('textIn1','textIn2','textIn3')"/>
-            <input type="reset" value="Reset" class="button2" onclick="fun()" />
+            <input type="reset" value="Clear" class="button2" onclick="resetInput()" />
 
-            <p id="x"> -- Result -- 
+            <p> -- Result -- 
                 <span id = "display_message"> </span> 
                 <span id = "display_message2"></span>
                 <span id = "display_message3"></span>
@@ -138,8 +139,12 @@
         </form>
     </div>
     <script>  
-        function fun(){  
-          document.getElementById("myForm").reset();  
+        function resetInput(){  
+          document.getElementById("myForm").reset(); 
+          document.getElementById("display_message").innerHTML="";
+          document.getElementById("display_message2").innerHTML="";
+          document.getElementById("display_message3").innerHTML="";
+          document.getElementById("display_message4").innerHTML="";
         }   
        </script>  
     <script src="js/calculate.js"></script>

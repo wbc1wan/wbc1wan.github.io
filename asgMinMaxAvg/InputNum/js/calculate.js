@@ -47,24 +47,5 @@ function validateNumber(e) {
     document.getElementById("error").style.display = ret ? "none" : "inline";  
     return ret;  
 }
-
-function clearInput()  
-{
-    document.getElementById('textIn1').value = "";
-    document.getElementById('textIn2').value = "";
-    document.getElementById('textIn3').value = "";
-    document.getElementById("x").innerHTML = "";
-    document.getElementById("hello").innerHTML = "";
-} 
-
-        var specialKeys = new Array();  
-        specialKeys.push(8);  
-        function IsNumeric(e) 
-        {  
-            var keyCode = e.which ? e.which : e.keyCode  
-            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);  
-            document.getElementById("error").style.display = ret ? "none" : "inline";  
-            return ret;  
-        } 
-
+   
 
