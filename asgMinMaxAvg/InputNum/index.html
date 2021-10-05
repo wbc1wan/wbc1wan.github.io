@@ -73,33 +73,20 @@
     <h1 style="text-align: center; color:rgb(243, 154, 167); text-shadow: 2px 2px black;"> Assignment minMaxAvg()</h1>
     <div class="container">
         <div class="content">
-
+            <span id="error" style="color: Red; display: none; font-size: small;"><strong>*Input Digits(0-9)</strong></span>
+            <br> 
+            
             <label>Enter 1<sup>st</sup> Number: </label><br>
-            <input type="text" id="textIn1" placeholder="Number only"
-            onkeypress="  if ( isNaN(this.value + String.fromCharCode(event.keyCode) )){
-                    alert('Please enter numbers only')
-                    return false;
-            }else{ 
-                return true
-                }"><br>
+            <input type="text" id="textIn1" placeholder="Number only" onkeypress="return validateNumber(event);" ondrop="return false;" onpaste="return false;" />  
+            <br>
 
             <label>Enter 2<sup>nd</sup> Number: </label><br>
-            <input type="text" id="textIn2" placeholder="Number only"
-            onkeypress="  if ( isNaN(this.value + String.fromCharCode(event.keyCode) )){
-                    alert('Please enter numbers only')
-                    return false;
-            }else{ 
-                return true
-                }"/><br>
+            <input type="text" id="textIn2" placeholder="Number only"onkeypress="return validateNumber(event);" ondrop="return false;" onpaste="return false;" />  
+            <br>
             
             <label>Enter 3<sup>rd</sup> Number: </label><br>
-            <input type="text" id="textIn3" placeholder="Number only"
-            onkeypress="  if ( isNaN(this.value + String.fromCharCode(event.keyCode) )){
-                    alert('Please enter numbers only')
-                    return false;
-            }else{ 
-                return true
-                }"/><br>
+            <input type="text" id="textIn3" placeholder="Number only"onkeypress="return validateNumber(event);" ondrop="return false;" onpaste="return false;" />  
+            <br>
             <br>
             <input type="button" id="btnSum" value="Calculate" class="button" onClick="minMaxAvg('textIn1','textIn2','textIn3')"/>
             <input type="reset" value="Reset" class="button2" onclick="clearInput()" />
@@ -113,5 +100,6 @@
         </div>
     </div>
     <script src="js/calculate.js"></script>
+    
 </body>
 </html>

@@ -31,14 +31,13 @@ function  minMaxAvg(textBox1, textBox2, textBox3){
     
 }
 
-function validateNumber(event) {
-    
-    if ( isNaN(this.value + String.fromCharCode(event.keyCode) )){
-        alert('Please enter numbers only')
-        return false;}
-        else{ 
-            return true
-        }
+function validateNumber(e) {
+    var specialKeys = new Array();  
+    specialKeys.push(8);
+    var keyCode = e.which ? e.which : e.keyCode  
+    var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);  
+    document.getElementById("error").style.display = ret ? "none" : "inline";  
+    return ret;  
 }
 
 function clearInput()  
@@ -49,5 +48,6 @@ function clearInput()
     document.getElementById("x").innerHTML = "";
 } 
 
+       
 
 
