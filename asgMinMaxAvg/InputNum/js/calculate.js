@@ -8,12 +8,12 @@ function  minMaxAvg(textBox1, textBox2, textBox3){
     var sum=0;
     input=[Number(x),Number(y),Number(z)];
 
-    if (x == null || x == "", y == null || y == "", z == null || z == "") {
+    if (x == null || x == "" || y == null || y == "" || z == null || z == "") {
         alert("Please Fill All Required Field");
         return false;
       }
 
-      else if(isNaN(x||y||z)){
+      else if(isNaN(x,y,z)){
         alert("Insert Digits Only (0-9)");
       }
 
