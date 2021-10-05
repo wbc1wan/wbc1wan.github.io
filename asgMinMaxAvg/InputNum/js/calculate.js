@@ -50,7 +50,7 @@ function validateNumber(e) {
 
 function reset()  
 {
-  location.reload();  
+  window.location.reload(); 
 } 
 
         var specialKeys = new Array();  
