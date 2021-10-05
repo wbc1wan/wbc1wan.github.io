@@ -107,6 +107,7 @@
 
     <h1 style="text-align: center; color:rgb(243, 154, 167); text-shadow: 2px 2px black;"> Assignment minMaxAvg()</h1>
     <div class="container">
+        <form id = "myForm" action = "#" style = "font-size: 20px;" > 
         <div class="content">
             <span id="error" style="color: Red; display: none; font-size: small;"><strong>*Input Digits(0-9)</strong></span>
             <br> 
@@ -124,7 +125,7 @@
             <br>
             <br>
             <input type="button" id="btnSum" value="Calculate" class="button" onClick="minMaxAvg('textIn1','textIn2','textIn3')"/>
-            <input type="reset" value="Reset" class="button2" onclick="clearInput()" />
+            <input type="reset" value="Reset" class="button2" onclick="fun()" />
 
             <p id="x"> -- Result -- 
                 <span id = "display_message"> </span> 
@@ -133,16 +134,14 @@
                 <span id = "display_message4"></span>
             </p>
 
-            <div id="hello"></div>
-
         </div>
+        </form>
     </div>
-    <script type ="text/javascript">
-        what();
-        function what(){
-            document.getElementById('hello').innerHTML = 'hi';
-        };
-    </script>
+    <script>  
+        function fun(){  
+          document.getElementById("myForm").reset();  
+        }   
+       </script>  
     <script src="js/calculate.js"></script>
     
 </body>
