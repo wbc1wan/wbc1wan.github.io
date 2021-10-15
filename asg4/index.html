@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Palindrome Checker</title>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Itim&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+
+.row-margin {
+  margin: 5vh auto;
+  text-align: center;
+}
+
+body {
+    background-image: url("https://www.10wallpaper.com/wallpaper/1920x1440/1711/Calm_lake_in_the_evening_Scenery_HD_Wallpaper_1920x1440.jpg");
+    color: #fff;
+    font-family: 'Architects Daughter', cursive;
+}
+
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+}
+
+.btn-default {
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+    </style>
+    <div>
+        <div class="container">
+          <div class="row row-margin">
+            <div class="col-sm-12">
+            <h1 class="text-center">Palindrome checker</h1>
+            </div>
+            <div class="col-sm-12">
+            <p class="text-center text-uppercase">
+                /ˈpalɪndrəʊm/ <br>
+                a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or nurses run.
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row row-margin">
+            <div class="col-md-2">
+              
+            </div>
+            <div class="col-md-8">
+            <textarea class="col-md-12" id="inputPalindrome" rows="5">Borrow or rob?</textarea>
+            </div>
+          </div>
+          <div class="row row-margin">
+            <div class="col-sm-3">
+              
+            </div>
+            <button id="checkPalindrome" class="btn btn-default btn-outline-info btn-lg btn-block col-sm-6 col-sm-offset-4" type="submit">Check palindrome</button>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row row-margin">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8 text-center">
+                <p id="res" color="white"></p>
+              <div id="notification" class="alert alert-info">Palindrome has not been checked yet</div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
