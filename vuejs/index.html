@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS Examples</title>
+    <script src="https://unpkg.com/vue"></script> <!-- vuejs pckg -->
+</head>
+<body>
+    <h1>VueJS Examples</h1>
+
+    <div id="app1">
+        {{ message }}
+    </div>
+
+    <div id="app2">
+        <span v-bond:title="message">
+            Hover your mouse here for a few second to see the title!
+        </span>
+        <a v-bind:href="linkUrl" target="_blank">{{ linkText }}</a>
+    </div>
+
+    <div id="app3">
+        <span v-if="showIt">Now you can see this!</span>
+        <span v-if="notshowIt">Ini xview Nononono!</span><br>
+        <button v-on:click="toggleMsg">Toggle Message</button>
+    <!-- v-on for event listener, for-for loops n ..-->
+    </div>
+
+    <div id="app4">
+        <ol>
+            <li v-for="todo in theList"> <!-- TODO IS THE ITEM -->
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app5">
+        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+        <ol>
+           <grocery-list v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></grocery-list>
+           <grocery-list v-for="item in orderList" v-bind:todo="item" v-bind:key="item.id"></grocery-list>
+        
+        </ol>
+    </div>
+    
+    <!--
+        arrangement script pnting sbb dia request mna lu
+    -->
+    <script src="js/grocery-list.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
