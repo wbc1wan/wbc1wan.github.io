@@ -1,21 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factorial</title>
 </head>
+
 <body>
+    <style>
+        body {
+            text-align: center;
+            color: white;
+            background: dodgerblue linear-gradient(60deg, rgb(33, 36, 34), dodgerblue, deeppink) fixed;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* CSS */
+        .button-20 {
+            appearance: button;
+            background-color: #4b4a4a;
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+            border: 2px solid #e84adb;
+            border-radius: 1rem;
+            box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin: 0;
+            padding: .5rem 1rem;
+            text-align: center;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+
+        .button-20:focus:not(:focus-visible),
+        .button-20:focus {
+            outline: 0;
+        }
+
+        .button-20:hover {
+            background-color: #030303;
+            border-color: #fafafd;
+        }
+
+        .button-20:focus {
+            background-color: #030303;
+            border-color: #b8ba3b;
+            box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+        }
+
+        .button-20:active {
+            background-color: #c9b6b6;
+            background-image: none;
+            border-color: #3A38AE;
+            box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+        }
+
+        .button-20:active:focus {
+            box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+        }
+
+        .content {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
 
     <h1>Welcome to Auto Factorial Count</h1>
-
-    Enter Your Number<input type="number" id="theNum">
-    <button onclick = "fact()">Factorial</button>
-    <p id = "res1"></p>  
-    <p id = "res"></p>  
-
+    <div class="content">
+        Enter Your Number : <input type="number" id="theNum" min="0" value="0">
+        <button class="button-20" onclick="fact()">Factorial</button>
+        <p id="res1"></p>
+        <p id="res"></p>
+    </div>
     <script src="js/factorial.js"></script>
-     
+
 </body>
+
 </html>

@@ -6,26 +6,38 @@ factNo.addEventListener('input', function () {
     console.log(factNo.value)
 })
 
+
 function fact() {
-    var i, num, f;
-    f = 1;
+
+
     num = document.getElementById("theNum").value;
-    for (i = 1; i <= num; i++) {
-        f = f * i;
-        console.log(i)
-        
+
+    if ("theNum" < 0) {
+        alert("Input a valid number")
+    } else {
+
+        var i, num, f;
+        f = 1;
+
+        for (i = 1; i <= num; i++) {
+            f = f * i;
+            console.log(i)
+
+        }
+        i = i - 1;
+
+        var text = "";
+        while (i > 0) {
+            text += i + "!";
+            i--;
+
+        }
+        alert("factorial(" + num + ") = " + text + " = " + f)
+
+        document.getElementById("res1").innerHTML = "For factorial(" + num + ") = " + text ;
+
+        document.getElementById("res").innerHTML =  num + "! is equal to " + f;
+
     }
-    i = i - 1;
-    
-    var text = "";
-  var k = 0;
-  while (k < num) {
-    text +=   k +"!";
-    k++;
-  }
-    document.getElementById("res1").innerHTML = text;
-  
-    document.getElementById("res").innerHTML = "The result factorial for the number " + i + " is: " + f + "!";
-   
 }
-    
+
