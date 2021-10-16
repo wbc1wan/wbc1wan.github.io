@@ -34,9 +34,9 @@ function fact() {
         }
         alert("factorial(" + num + ") = " + text + " = " + f)
 
-        document.getElementById("res1").innerHTML = "For factorial(" + num + ") = " + text ;
+        document.getElementById("res1").innerHTML = "For factorial(" + num + ") = " + text;
 
-        document.getElementById("res").innerHTML =  num + "! is equal to " + f;
+        document.getElementById("res").innerHTML = num + "! is equal to " + f;
 
     }
 }
