@@ -35,7 +35,7 @@ function fact() {
 
         document.getElementById("res1").innerHTML = "For factorial(" + num + ") = " + text + "1";
 
-        document.getElementById("res").innerHTML = num + "! is equal to " + totalFact;
+        document.getElementById("res").innerHTML = num + "! is equal to <strong>" + totalFact + "</strong>";
 
     }
 }
