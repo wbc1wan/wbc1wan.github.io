@@ -1,5 +1,3 @@
-console.clear();
-
 
 let factNo = document.getElementById("theNum");
 factNo.addEventListener('input', function () {
@@ -8,35 +6,36 @@ factNo.addEventListener('input', function () {
 
 
 function fact() {
-
-
     num = document.getElementById("theNum").value;
 
-    if ("theNum" < 0) {
+    if (num < 0) {
         alert("Input a valid number")
     } else {
-
-        var i, num, f;
-        f = 1;
+        console.clear();
+        var i, num, totalFact;
+        totalFact = 1;
 
         for (i = 1; i <= num; i++) {
-            f = f * i;
-            console.log(i)
+            totalFact = totalFact * i;
+            console.log("fact result :" + totalFact)
 
         }
         i = i - 1;
 
         var text = "";
-        while (i > 0) {
-            text += i + "!";
-            i--;
-
+        while (i > 1) {
+            if (i == 1) {
+                text += i + "  ";
+            } else {
+                text += i + " x ";
+            }
+            i--
         }
-        alert("factorial(" + num + ") = " + text + " = " + f)
+        alert("factorial(" + num + ") = " + text + "1 = " + totalFact)
 
-        document.getElementById("res1").innerHTML = "For factorial(" + num + ") = " + text;
+        document.getElementById("res1").innerHTML = "For factorial(" + num + ") = " + text + "1";
 
-        document.getElementById("res").innerHTML = num + "! is equal to " + f;
+        document.getElementById("res").innerHTML = num + "! is equal to " + totalFact;
 
     }
 }
