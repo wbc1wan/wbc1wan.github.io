@@ -17,6 +17,7 @@ function vowel_count(str1) {
 let elParameter = document.getElementById('inputParam');
 checkVowel.addEventListener("click", function () {
   let elParameter_val = elParameter.value
-  console.log("Vowel count : " + vowel_count(elParameter_val) + " for " + elParameter_val)
+  console.log("Vowel count : " + vowel_count(elParameter_val) + " for " + elParameter_val);
+  alert("Vowel count : " + vowel_count(elParameter_val) + "\nfor " + elParameter_val);
   document.getElementById("res").innerHTML = "Amount of Vowel : " + vowel_count(elParameter_val);
 })

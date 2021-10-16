@@ -9,14 +9,22 @@
 </head>
 
 <body>
+
     <style>
-        body {
+      @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+  body {
             text-align: center;
             color: white;
             background: dodgerblue linear-gradient(60deg, rgb(33, 36, 34), dodgerblue, deeppink) fixed;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
         }
 
+        h1{
+            font-family: 'Courgette', cursive;
+            font-size:40px;
+            text-shadow: 2px 2px rgb(243, 85, 243)
+        }
         /* CSS */
         .button-20 {
             appearance: button;
@@ -33,7 +41,7 @@
             font-weight: 300;
             line-height: 1.5;
             margin: 0;
-            padding: .5rem 1rem;
+            padding: .1rem 1rem;
             text-align: center;
             transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             user-select: none;
@@ -70,15 +78,16 @@
         }
 
         .content {
+            text-align: center;
             position: fixed;
-            top: 30%;
+            top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
     </style>
 
 
-    <h1>Welcome to Auto Factorial Count</h1>
+    <h1>Welcome to Auto Factorial Count !</h1>
     <div class="content">
         Enter Your Number : <input type="number" id="theNum" min="0" value="0">
         <button class="button-20" onclick="fact()">Factorial</button>
