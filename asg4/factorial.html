@@ -82,16 +82,20 @@
         .content {
             text-align: center;
             position: fixed;
-            top: 45%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.562);
+            border-radius: 1rem;
+            line-height: 1.9;
+            padding: .1rem 1rem;
         }
     </style>
 
 
     <h1>Welcome to Auto Factorial Count !</h1>
     <div class="content">
-        Enter Your Number : <input type="number" id="theNum" min="0" value="0">
+        Enter Your Number : <input type="number" id="theNum" min="0" value="0">&nbsp
         <button class="button-20" onclick="fact()">Factorial</button>
         <p id="res1"></p>
         <p id="res"></p>
