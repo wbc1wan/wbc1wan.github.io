@@ -1,0 +1,132 @@
+[color=navy]
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>scroll up and down ad infinitum</title>
+
+    <style>
+        #container {
+            position: relative;
+
+            text-align: center;
+
+        }
+
+        #container h2 {
+            padding: 50px 0;
+        }
+
+        #container h2:last-of-type {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hoverable {
+            background-color: white;
+        }
+
+        .hoverable:hover {
+
+            background-color: blue;
+            color: white;
+        }
+
+        a[target] {
+            background-color: yellow;
+        }
+
+        a[title~=rock] {
+            font-weight: bold;
+        }
+
+        div~p {
+            background-color: red;
+            color: white;
+        }
+    </style>
+
+    <script>
+
+        (function () {
+            'use strict';
+
+            var dbh, sto, num = 30, temp = 0, scrolldelay = 100;
+
+            function init() {
+                dbh = document.body.offsetHeight;
+                pageScroll();
+            }
+
+            function pageScroll() {
+                window.scrollBy(0, num);
+                temp += num;
+                if ((temp >= dbh) || (temp <= 0)) {
+                    num = -num;
+                }
+                sto = setTimeout(function () {
+                    pageScroll();
+                }, scrolldelay);
+            }
+            window.addEventListener ?
+                window.addEventListener('load', init, false) :
+                window.attachEvent('onload', init);
+        })();
+    </script>
+
+</head>
+
+<body style="background-color: #f9ecb6">
+
+    <div id="container">
+
+
+
+        <h2>This is the Top</h2>
+        <h2>This is the in between</h2>
+
+
+        <h2>Attribute Selector</h2>
+        <a id="metallica" href="https://www.metallica.com/" title="website rock band">Metallica</a>
+        <a href="https://www.google.com.my/" title="website search engine" target="_blank">Google</a>
+        <a href="https://www.lazada.com.my/" title="website ecommerce">Lazada</a>
+        <h2>Pseudo Selector</h2>
+        <div class="hoverable">Hover on me!</div>
+
+
+        <h2>Relational Selector</h2>
+        <p>Paragraph 8 in BODY</p>
+        <div class="main">
+            <p>Paragraph 1 in DIV</p>
+            <p>Paragraph 2 in DIV</p>
+            <span>
+                <p>Paragraph 3 in DIV >> SPAN</p>
+            </span>
+            <p>Paragraph 4 in DIV</p>
+            <p>Paragraph 5 in DIV</p>
+        </div>
+        <p>Paragraph 6 in BODY</p>
+        <p>Paragraph 7 in BODY</p>
+
+        <h2>This is the in between</h2>
+        
+        <h2>This is the Bottom</h2>
+
+
+
+    <script>
+        const mouseTarget = document.getElementById('metallica');
+
+        mouseTarget.addEventListener('mouseenter', e => {
+
+            alert('Auto Scrolled Stop.');
+        });
+    </script>
+
+</body>
+
+</html>[/color]

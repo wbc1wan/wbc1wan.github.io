@@ -9,13 +9,21 @@ bookNowBtn.addEventListener("click", function () {
     let userPax = document.getElementById("userPax")
     let userPaxVal = userPax.value
 
-
     let userRemarks = document.getElementById("userRemarks")
     let userRemarksVal = userRemarks.value
 
+    if(userEmailVal==""){
+        alert("Please complete all the field to submit")
+    }else if(userEmailVal==""){
+        alert("Please complete all the field to submit")
+    }else if(userRemarksVal==""){
+        alert("Please complete all the field to submit")
+    }else{
+
     BookNow(userNameVal, userEmailVal, userPaxVal, userRemarksVal)
     //make sure name fx same as bwh ma
-
+   
+}
 })
 
 function BookNow(userName, userEmail, userPax, userRemarks) {
@@ -25,7 +33,7 @@ function BookNow(userName, userEmail, userPax, userRemarks) {
     // console.log(userRemarks)
 
 
-    let url = 'https://api.sheety.co/e605e885f5f282dff0485448c92b7ff3/bookingApp/bookings';
+    let url = 'https://api.sheety.co/25b6c0e528b49f106cc5ee4112e0ccd7/bookingApp/bookings';
     let body = {
         booking: {
             name: userName,
@@ -45,7 +53,9 @@ function BookNow(userName, userEmail, userPax, userRemarks) {
         .then(json => {
             // Do something with object
             console.log(json.booking);
-            alert(json.booking.name + " added in the list!")
+            alert(json.booking.name + " your order has been taken!")
+            location.reload();
+            return false;
 
         });
 }

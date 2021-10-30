@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>CSS selector</title>
+    <style>
+        #container {
+            position: relative;
+            height: 200px;
+        }
+
+        /* Decendent selector div p */
+        /* Immideate adjacent sibling selector div + p */
+        /* Child div > p */
+        /* General Sibling div ~ p */
+        div~p {
+            background-color: red;
+            color: white;
+        }
+
+        /* Pseudo Selector */
+        .hoverable {
+            background-color: white;
+        }
+
+        .hoverable:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Attribute Selector */
+        a[target] {
+            background-color: yellow;
+        }
+
+        a[title~=rock] {
+            font-weight: bold;
+        }
+
+        /* Structural Selector */
+        li:first-child {
+            background-color: green;
+            color: white;
+        }
+
+        li:nth-child(6) {
+            background-color: maroon;
+            color: white;
+        }
+
+        li:nth-last-child(7) {
+            background-color: black;
+            color: white;
+        }
+    </style>
+      <script>
+        (function () {
+            'use strict';
+
+            var dbh, sto, num = 500, temp = 10, scrolldelay = 1000;
+
+            function init() {
+                dbh = document.body.offsetHeight;
+                pageScroll();
+            }
+
+            function pageScroll() {
+                window.scrollBy(0, num);
+                temp += num;
+                if ((temp >= dbh) || (temp <= 0)) {
+                    num = -num;
+                }
+                sto = setTimeout(function () {
+                     pageScroll(); }, scrolldelay);
+            }
+            window.addEventListener ?
+                window.addEventListener('load', init, false) :
+                window.attachEvent('onload', init);
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div id="container">
+        <h1>CSS Selector Example</h1>
+
+        <h2>Structural Selector</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+        </ul>
+
+
+        <h2>Attribute Selector</h2>
+        <a href="https://www.metallica.com/" title="website rock band">Metallica</a>
+        <a href="https://www.google.com.my/" title="website search engine" target="_blank">Google</a>
+        <a href="https://www.lazada.com.my/" title="website ecommerce">Lazada</a>
+        <h2>Pseudo Selector</h2>
+        <div class="hoverable">Hover on me!</div>
+
+        <h2>Relational Selector</h2>
+        <p>Paragraph 8 in BODY</p>
+        <div class="main">
+            <p>Paragraph 1 in DIV</p>
+            <p>Paragraph 2 in DIV</p>
+            <span>
+                <p>Paragraph 3 in DIV >> SPAN</p>
+            </span>
+            <p>Paragraph 4 in DIV</p>
+            <p>Paragraph 5 in DIV</p>
+        </div>
+        <p>Paragraph 6 in BODY</p>
+        <p>Paragraph 7 in BODY</p>
+
+    
+</body>
+
+</html>
+
+
+
