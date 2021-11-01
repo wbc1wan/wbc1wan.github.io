@@ -19,11 +19,11 @@ checkButton.addEventListener("click", function () {
   var notification = document.getElementById("notification");
 
   if (isPalindrome(value)) {
-    alert("True")
+    alert("True Palindrome")
     notification.innerHTML = "Yay! You've got a palindrome";
     notification.className = "alert alert-success";
   } else {
-    alert("False")
+    alert("False Palindrome")
     notification.innerHTML = "Ops! Not a palindrome";
     notification.className = "alert alert-danger";
   }
